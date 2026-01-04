@@ -1,0 +1,42 @@
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.item {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+
+  animation: scroll-left 70s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.track span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

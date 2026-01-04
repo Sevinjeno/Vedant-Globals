@@ -1,0 +1,67 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 800px) 1fr;
+  align-items: center;
+  min-height: 70vh;
+  padding: 4rem 1rem;
+
+  /* The Gradient Update */
+  background: linear-gradient(
+    100deg, 
+    #ebeff7 50%,    /* Your Blue (Top-Left) */
+    #3b94ec 110%   /* Very Light Grey/White (Middle) */
+  );
+  
+  border: 1px solid rgba(224, 242, 254, 0.2);
+}
+
+.hero > * {
+  grid-column: 2;
+  text-align: center;
+}
+
+
+.title {
+  font-size: 3.5rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #4b5563;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Base button styles now use a class */
+.btn {
+  padding: 20px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s;
+}
+
+.primary {
+  composes: btn; /* This is a cool CSS Modules trick to share styles */
+  background: #000;
+  color: #fff;
+}
+
+.secondary {
+  composes: btn;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #111;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
