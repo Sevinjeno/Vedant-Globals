@@ -1,0 +1,43 @@
+.processSection {
+  background: linear-gradient(180deg, #f6f7f9 0%, #ffffff 100%);
+  padding: 5rem 1.5rem;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.processSection h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+  max-width: 700px;
+  margin-inline: auto;
+}
+.processList {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.75rem;
+
+  list-style: none;
+  padding: 0;
+}
+.processItem {
+  background: #ffffff;
+  padding: 2.2rem 1.6rem;
+  border-radius: 16px;
+
+  text-align: center;
+  font-weight: 500;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
